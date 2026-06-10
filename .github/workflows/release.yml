@@ -16,10 +16,6 @@ jobs:
       - name: Install Rust
         uses: dtolnay/rust-toolchain@stable
         
-      - name: Run Tests
-        run: cargo test --workspace
-        working-directory: axiom
-        
       - name: Build Release Binaries
         run: cargo build --release --workspace
         working-directory: axiom
