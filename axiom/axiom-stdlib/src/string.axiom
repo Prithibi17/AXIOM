@@ -1,0 +1,28 @@
+import native
+
+pub fn length(s: Str) -> Num { native.string_length(s) }
+pub fn concat(a: Str, b: Str) -> Str { native.string_concat(a, b) }
+pub fn substring(s: Str, start: Num, len: Num) -> Str { 
+  native.string_substring(s, start, len) 
+}
+pub fn indexOf(s: Str, substr: Str) -> Num { 
+  native.string_index_of(s, substr) 
+}
+pub fn split(s: Str, delimiter: Str) -> Array[Str] { 
+  native.string_split(s, delimiter) 
+}
+pub fn join(arr: Array[Str], delimiter: Str) -> Str { 
+  native.string_join(arr, delimiter) 
+}
+pub fn toLowerCase(s: Str) -> Str { native.string_to_lower(s) }
+pub fn toUpperCase(s: Str) -> Str { native.string_to_upper(s) }
+pub fn trim(s: Str) -> Str { native.string_trim(s) }
+pub fn replace(s: Str, find: Str, replace: Str) -> Str { 
+  native.string_replace(s, find, replace) 
+}
+pub fn startsWith(s: Str, prefix: Str) -> Bool { 
+  native.string_starts_with(s, prefix) 
+}
+pub fn endsWith(s: Str, suffix: Str) -> Bool { 
+  native.string_ends_with(s, suffix) 
+}

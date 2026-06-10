@@ -1,0 +1,19 @@
+-- A simple Hello World and Fibonacci example
+
+import math
+
+fn fib(n: Num) -> Num {
+  if n <= 1 {
+    n
+  } else {
+    fib(n - 1) + fib(n - 2)
+  }
+}
+
+fn main() {
+  print("Hello, World!")
+  
+  let result = fib(10)
+  print("Fibonacci of 10 is: ")
+  print(result)
+}

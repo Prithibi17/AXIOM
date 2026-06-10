@@ -1,0 +1,14 @@
+import native
+
+pub fn sin(x: Num) -> Num { native.sin(x) }
+pub fn cos(x: Num) -> Num { native.cos(x) }
+pub fn tan(x: Num) -> Num { native.tan(x) }
+pub fn sqrt(x: Num) -> Num { native.sqrt(x) }
+pub fn pow(x: Num, y: Num) -> Num { native.pow(x, y) }
+pub fn abs(x: Num) -> Num { native.abs(x) }
+pub fn floor(x: Num) -> Num { native.floor(x) }
+pub fn ceil(x: Num) -> Num { native.ceil(x) }
+pub fn round(x: Num) -> Num { native.round(x) }
+pub fn min(a: Num, b: Num) -> Num { if a < b { a } else { b } }
+pub fn max(a: Num, b: Num) -> Num { if a > b { a } else { b } }
+pub fn random() -> Num { native.random() }

@@ -1,0 +1,9 @@
+[workspace]
+members = [
+    "axiom-compiler",
+    "axiom-stdlib",
+    "axiom-cli",
+    "axiom-pm",
+    "axiom-lsp"
+]
+resolver = "2"

@@ -1,0 +1,35 @@
+import native
+
+pub fn length[T](arr: Array[T]) -> Num { native.array_length(arr) }
+pub fn push[T](arr: Array[T], item: T) -> Null { native.array_push(arr, item) }
+pub fn pop[T](arr: Array[T]) -> Option[T] { native.array_pop(arr) }
+pub fn shift[T](arr: Array[T]) -> Option[T] { native.array_shift(arr) }
+pub fn unshift[T](arr: Array[T], item: T) -> Null { 
+  native.array_unshift(arr, item) 
+}
+pub fn slice[T](arr: Array[T], start: Num, end: Num) -> Array[T] { 
+  native.array_slice(arr, start, end) 
+}
+pub fn concat[T](a: Array[T], b: Array[T]) -> Array[T] { 
+  native.array_concat(a, b) 
+}
+pub fn reverse[T](arr: Array[T]) -> Null { native.array_reverse(arr) }
+pub fn sort[T](arr: Array[T]) -> Null { native.array_sort(arr) }
+pub fn join[T](arr: Array[T], delimiter: Str) -> Str { 
+  native.array_join(arr, delimiter) 
+}
+pub fn map[T, U](arr: Array[T], f: fn(T) -> U) -> Array[U] { 
+  native.array_map(arr, f) 
+}
+pub fn filter[T](arr: Array[T], f: fn(T) -> Bool) -> Array[T] { 
+  native.array_filter(arr, f) 
+}
+pub fn reduce[T, U](arr: Array[T], f: fn(U, T) -> U, init: U) -> U { 
+  native.array_reduce(arr, f, init) 
+}
+pub fn find[T](arr: Array[T], f: fn(T) -> Bool) -> Option[T] { 
+  native.array_find(arr, f) 
+}
+pub fn includes[T](arr: Array[T], item: T) -> Bool { 
+  native.array_includes(arr, item) 
+}

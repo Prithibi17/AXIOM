@@ -1,0 +1,32 @@
+name: AXIOM Release
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+
+jobs:
+  build:
+    name: Build and Release
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Install Rust
+        uses: dtolnay/rust-toolchain@stable
+      
+      - name: Install LLVM
+        run: sudo apt-get install llvm-dev
+        
+      - name: Run Tests
+        run: cargo test --workspace
+        
+      - name: Build Release Binaries
+        run: cargo build --release --workspace
+        
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: target/release/axiom-cli
+          generate_release_notes: true

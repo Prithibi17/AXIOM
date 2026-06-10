@@ -1,0 +1,7 @@
+[package]
+name = "axiom-stdlib"
+version = "0.1.0"
+edition = "2021"
+
+# The stdlib doesn't necessarily compile as Rust code, 
+# but we can configure it as a package to bundle the .axiom files.
