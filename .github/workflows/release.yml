@@ -18,15 +18,18 @@ jobs:
         
       - name: Run Tests
         run: cargo test --workspace
+        working-directory: axiom
         
       - name: Build Release Binaries
         run: cargo build --release --workspace
+        working-directory: axiom
         
       - name: Compile Inno Setup Installer
         run: iscc installer.iss
+        working-directory: axiom
         
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v1
         with:
-          files: dist/AxiomSetup.exe
+          files: axiom/dist/AxiomSetup.exe
           generate_release_notes: true
